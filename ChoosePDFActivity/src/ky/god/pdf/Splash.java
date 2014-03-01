@@ -39,19 +39,7 @@ public class Splash extends Activity {
     // Progress dialog type (0 - for Horizontal progress bar)
     public static final int progress_bar_type = 0; 
  
-    // File url to download
-//    private static String file_url = "http://api.androidhive.info/progressdialog/hive.jpg";
-    private static String file_uae = "http://gulfoilfielddirectory.com/ebook/pdf/mainbook.pdf";
-    private static String file_bahrain = "http://gulfoilfielddirectory.com/ebook/pdf/bahrain.pdf";
-    private static String file_oman = "http://gulfoilfielddirectory.com/ebook/pdf/oman.pdf";
-    private static String file_qatar = "http://gulfoilfielddirectory.com/ebook/pdf/qatar.pdf";
-    private static String file_Houston = "http://gulfoilfielddirectory.com/ebook/pdf/houston.pdf";
-    private static String file_Iran = "http://gulfoilfielddirectory.com/ebook/pdf/IRAN%20CLS%20&%20LISTINGS.pdf";
-    private static String file_Iraq = "http://gulfoilfielddirectory.com/ebook/pdf/IRAQ%20CLS%20&%20LISTINGS.pdf";
-    private static String file_International = "http://gulfoilfielddirectory.com/ebook/pdf/international.pdf";
-    private static String file_saudi = "http://gulfoilfielddirectory.com/ebook/pdf/saudi.pdf";
-    private static String file_kuwait = "http://gulfoilfielddirectory.com/ebook/pdf/kuwait.pdf";
-    private static String file_yemen = "http://gulfoilfielddirectory.com/ebook/pdf/YEMEN%20CLS%20&%20LISTINGS.pdf";
+  
     String Location = "/Android/obb/ky.god.pdf";
     protected boolean _active = true;
     protected int _splashTime = 3000; 
@@ -91,239 +79,497 @@ public class Splash extends Activity {
 		        File myFile = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Yemen Ebook");  
 		        if (myFile.exists())  
 		        {  
+		      	 myFile.delete();
+		      	 myFile = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/yemen2014 Ebook");
+		      	 if (myFile.exists())  
+			        {
+		      		 
+			        }
 		      	 
-		              
-		        }  else{
+		        else{
 		        
 		       // new DownloadFileFromURL().execute(file_yemen);
-		        String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/YEMEN%20CLS%20&%20LISTINGS.pdf";
+		        String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/yemen2014.pdf";
 			    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-			    request.setDescription("Ebook Yemen");   //appears the same in Notification bar while downloading
-			    request.setTitle("Yemen Ebook");                 
+			    request.setDescription("Ebook Yemen2014");   //appears the same in Notification bar while downloading
+			    request.setTitle("Yemen2014 Ebook");                 
 			    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			        request.allowScanningByMediaScanner();
 			        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 			    }
-			    request.setDestinationInExternalPublicDir(Location, "Yemen Ebook");
+			    request.setDestinationInExternalPublicDir(Location, "Yemen2014 Ebook");
 			 
 			    // get download service and enqueue file
 			    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 			    manager.enqueue(request);
 		        }
-		        
+		      	 
+		        } else{
+		        	 if (myFile.exists())  
+				        {
+			      		 
+				        }else{
+			        
+				       // new DownloadFileFromURL().execute(file_yemen);
+				        String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/yemen2014.pdf";
+					    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+					    request.setDescription("Ebook Yemen2014");   //appears the same in Notification bar while downloading
+					    request.setTitle("Yemen2014 Ebook");                 
+					    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+					        request.allowScanningByMediaScanner();
+					        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+					    }
+					    request.setDestinationInExternalPublicDir(Location, "Yemen2014 Ebook");
+					 
+					    // get download service and enqueue file
+					    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+					    manager.enqueue(request);
+				        }
+		        }
 		        File myFileuae = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Uae Ebook");  
 		        if (myFileuae.exists())  
-		        {  
-		      	 Log.d(file_uae, "UAE Ebook installed");
-		              
+		        {  myFileuae.delete();
+		        myFileuae = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/mainbook2014 Ebook");
+		      	 if (myFileuae.exists())  
+			        {
+		      		 
+			      		              
 		        }  else{
 		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/mainbook.pdf";
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/mainbook2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook UAE");   //appears the same in Notification bar while downloading
-				    request.setTitle("UAE Ebook");                 
+				    request.setDescription("Ebook UAE2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("UAE2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "Uae Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "UAE2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
+		        }
+		        } else{
+		        	 if (myFileuae.exists())  
+				        {
+			      		 
+				      		              
+			        } else{
+			        	
+			      
+		        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/mainbook2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook UAE");   //appears the same in Notification bar while downloading
+				    request.setTitle("UAE2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "UAE2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        }
 		        }
 		        File myFilebahrain = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Bahrain Ebook");  
 		        if (myFilebahrain.exists())  
 		        {  
-		        	Log.d(file_bahrain,"Bahrain Ebook installed");
+		        	myFilebahrain.delete();
+		        	myFilebahrain = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/bahrain2014 Ebook");
+			      	 if (myFilebahrain.exists())  
+				        {
+			      		 
+				        }
+		        	
 		              
-		        }  else{
+		         else{
 		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/bahrain.pdf";
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/bahrain2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook Bahrain");   //appears the same in Notification bar while downloading
-				    request.setTitle("Bahrain Ebook");                 
+				    request.setDescription("Ebook Bahrain2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Bahrain2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "Bahrain Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "Bahrain2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        }
+		        }  else{
+		        	 if (myFilebahrain.exists())  
+				        {
+			      		 
+				        }else{
+				        	
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/bahrain2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook Bahrain2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Bahrain2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "Bahrain2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        }}
 		        File myFilehouston = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Houston Ebook");  
 		        if (myFilehouston.exists())  
-		        {  
-		      	Log.d(file_Houston, "Houston Ebook installed");
-		              
-		        }  else{
+		        { 
+		        	myFilehouston.delete();
+		        	myFilehouston = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/houston2014 Ebook");
+			      	 if (myFilehouston.exists())  
+				        {
+			      		 
+				        }  else{
 		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/houston.pdf";
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/houston2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook Houston");   //appears the same in Notification bar while downloading
-				    request.setTitle("Houston Ebook");                 
+				    request.setDescription("Ebook Houston2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Houston2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "Houston Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "Houston2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        }
+		        } else{
+		        	 if (myFilehouston.exists())  
+				        {
+			      		 
+				        }else{
+		        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/houston2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook Houston2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Houston2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "Houston2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        }}
 		        File myFileiran = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Iran Ebook");  
 		        if (myFileiran.exists())  
-		        {  
-		      	 Log.d(file_Iran, "Iran Ebook installed");
-		              
-		        }  else{
+		        { 
+		        	myFileiran.delete();
+		        	myFileiran = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/iran2014.pdf");
+			      	 if (myFileiran.exists())  
+				        {
+			      		 
+				        }  else{
 		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/IRAN%20CLS%20&%20LISTINGS.pdf";
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/iran2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook Iran");   //appears the same in Notification bar while downloading
-				    request.setTitle("Iran Ebook");                 
+				    request.setDescription("Ebook Iran2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Iran2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "Iran Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "Iran2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        }
+		        }  else{
+		        	 if (myFileiran.exists())  
+				        {
+			      		 
+				        } else{
+		        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/iran2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook Iran2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Iran2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "Iran2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        }}
 		        File myFileiraq = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Iraq Ebook");  
 		        if (myFileiraq.exists())  
-		        {  
-		      	 Log.d(file_Iraq, "Iraq Ebook installed");
+		        {
+		        	myFileiraq.delete();
+		        	myFileiraq = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/iraq2014.pdf");
+			      	 if (myFileiraq.exists())  
+				        {
+			      		 
+				        } 
 		              
-		        }  else{
+		        else{
 		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/IRAQ%20CLS%20&%20LISTINGS.pdf";
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/iraq2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook Iraq");   //appears the same in Notification bar while downloading
-				    request.setTitle("Iraq Ebook");                 
+				    request.setDescription("Ebook Iraq2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Iraq2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "Iraq Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "Iraq2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        }
-		        File myFilekuwait = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Kuwait Ebook");  
-		        if (myFilekuwait.exists())  
-		        {  
-		      	 Log.d(file_kuwait, "Kuwait Ebook installed");
-		              
-		        }  else{
-		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/kuwait.pdf";
+		        }
+		        else{
+		        	 if (myFileiraq.exists())  
+				        {
+			      		 
+				        } else{
+			        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/iraq2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook Iraq");   //appears the same in Notification bar while downloading
-				    request.setTitle("Iraq Ebook");                 
+				    request.setDescription("Ebook Iraq2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Iraq2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "Kuwait Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "Iraq2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
-		        }   
+		        }}
+		        File myFilekuwait = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Kuwait Ebook");  
+		        if (myFilekuwait.exists())  
+		        {   myFilekuwait.delete();
+		        myFilekuwait = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/kuwait2014.pdf");
+		      	 if (myFilekuwait.exists())  
+			        {
+		      		 
+			        }  else{
 		        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/kuwait2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook Kuwait2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Kuwait2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "Kuwait2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        }   }else{
+		        	 if (myFilekuwait.exists())  
+				        {
+			      		 
+				        }else{
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/kuwait2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook Kuwait2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Kuwait2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "Kuwait2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        }
+		        }
 		        File myFileoman = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Oman Ebook");  
 		        if (myFileoman.exists())  
 		        {  
-		      	 Log.d(file_oman, "Oman Ebook installed");
-		              
-		        }  else{
+		        	myFileoman.delete();
+		        	myFileoman = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/oman2014.pdf");
+				      	 if (myFileoman.exists())  
+					        {
+				      		 
+					        }    else{
 		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/oman.pdf";
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/oman2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook Oman");   //appears the same in Notification bar while downloading
-				    request.setTitle("Oman Ebook");                 
+				    request.setDescription("Ebook Oman2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Oman2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "Oman Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "Oman2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
-		        }  
+		        }  }    else{
+		        	 if (myFileoman.exists())  
+				        {
+			      		 
+				        }else{
+		        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/oman2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook Oman2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Oman2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "Oman2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        }}
 		        File myFileqatar = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Qatar Ebook");  
 		        if (myFileqatar.exists())  
-		        {  
-		      	 Log.d(file_qatar, "Qatar Ebook installed");
-		              
-		        }  else{
+		        {   myFileqatar.delete();
+		        myFileqatar = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/qatar2014.pdf");
+		      	 if (myFileqatar.exists())  
+			        {
+		      		 
+			        } else{
 		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/qatar.pdf";
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/qatar2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook Qatar");   //appears the same in Notification bar while downloading
-				    request.setTitle("Qatar Ebook");                 
+				    request.setDescription("Ebook Qatar2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Qatar2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "Qatar Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "Qatar2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
-		        } 
+		        } } else{
+		        	if (myFileqatar.exists())  
+			        {
+		      		 
+			        } else{
+		        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/qatar2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook Qatar2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Qatar2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "Qatar2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        }}
 		        File myFilesaudi = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Saudi Ebook");  
 		        if (myFilesaudi.exists())  
-		        {  
-		      	 Log.d(file_saudi, "Saudi Ebook installed");
-		              
-		        }  else{
+		        { myFilesaudi.delete();
+		        myFilesaudi = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/saudi2014.pdf");
+		      	 if (myFilesaudi.exists())  
+			        {
+		      		 
+			        }  else{
 		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/saudi.pdf";
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/saudi2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook Saudi");   //appears the same in Notification bar while downloading
-				    request.setTitle("Saudi Ebook");                 
+				    request.setDescription("Ebook Saudi2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Saudi2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "Saudi Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "Saudi2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        } }else{
+		        	 if (myFilesaudi.exists())  
+				        {
+			      		 
+				        } else{
+		        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/saudi2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook Saudi2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Saudi2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "Saudi2014 Ebook");
+				 
+				    // get download service and enqueue file
+				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+				    manager.enqueue(request);
+		        }}
+		        File myFileinternational = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/International Ebook");  
+		        if (myFileinternational.exists())  
+		        {  myFileinternational.delete();
+		        myFileinternational = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/international2014.pdf");
+		      	 if (myFileinternational.exists())  
+			        {
+		      		 
+			        }  else{
+		        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/international2014.pdf";
+				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
+				    request.setDescription("Ebook International2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Internation2014 Ebook");                 
+				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				        request.allowScanningByMediaScanner();
+				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+				    }
+				    request.setDestinationInExternalPublicDir(Location, "International2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        } 
-		        File myFileinternational = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/International Ebook");  
-		        if (myFileinternational.exists())  
-		        {  
-		      	 Log.d(file_International, "International Ebook installed");
-		              
-		        }  else{
-		        
-		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/international.pdf";
+		        }
+		        else{ if (myFileinternational.exists())  
+		        {
+		      		 
+		        } else{
+			        
+		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/international2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
-				    request.setDescription("Ebook International");   //appears the same in Notification bar while downloading
-				    request.setTitle("Internation Ebook");                 
+				    request.setDescription("Ebook International2014");   //appears the same in Notification bar while downloading
+				    request.setTitle("Internation2014 Ebook");                 
 				    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 				        request.allowScanningByMediaScanner();
 				        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
 				    }
-				    request.setDestinationInExternalPublicDir(Location, "International Ebook");
+				    request.setDestinationInExternalPublicDir(Location, "International2014 Ebook");
 				 
 				    // get download service and enqueue file
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        } 
 		       
-				
+		        }
 		        Intent intent_name = new Intent();
 	            intent_name.setClass(getApplicationContext(),ChoosePDFActivity.class);
 	            finish();
@@ -331,6 +577,7 @@ public class Splash extends Activity {
 	            
 				
 				
+             
                 }
             };
                  };
