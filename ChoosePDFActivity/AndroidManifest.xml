@@ -10,12 +10,13 @@
         android:normalScreens="true"
         android:largeScreens="true"
         android:anyDensity="true" />
-    <uses-sdk android:minSdkVersion="11"/>
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="11"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:label="@string/app_name"
         android:icon="@drawable/icon"
-        android:debuggable="false"
+        android:debuggable="true"
         android:hardwareAccelerated="true">
         <activity
             android:name="ChoosePDFActivity"
@@ -81,5 +82,7 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.google.ads.AdActivity"
+              android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
     </application>
 </manifest> 

@@ -141,7 +141,7 @@ public class ChoosePDFActivity extends ListActivity {
 					adapter.add(new ChoosePDFItem(ChoosePDFItem.Type.DIR, f.getName()));
 				for (File f : mFiles)
 					adapter.add(new ChoosePDFItem(ChoosePDFItem.Type.DOC, f.getName()));
-
+				
 				lastPosition();
 			}
 		};

@@ -49,7 +49,7 @@ public class ChoosePDFAdapter extends BaseAdapter {
 		switch (type) {
 		case PARENT: return R.drawable.ic_arrow_up;
 		case DIR: return R.drawable.ic_dir;
-		case DOC: return R.drawable.ic_doc;
+		case DOC: return R.drawable.cover;
 		default: return 0;
 		}
 	}
@@ -64,7 +64,7 @@ public class ChoosePDFAdapter extends BaseAdapter {
 		ChoosePDFItem item = mItems.get(position);
 		((TextView)v.findViewById(R.id.name)).setText(item.name);
 		((ImageView)v.findViewById(R.id.icon)).setImageResource(iconForType(item.type));
-		((ImageView)v.findViewById(R.id.icon)).setColorFilter(Color.argb(255, 0, 0, 0));
+		
 		return v;
 	}
 

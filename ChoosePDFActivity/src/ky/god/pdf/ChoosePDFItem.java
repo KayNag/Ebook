@@ -4,7 +4,7 @@ import ky.god.pdf.R;
 
 public class ChoosePDFItem {
 	enum Type {
-		PARENT, DIR, DOC
+		DIR, DOC,PARENT
 	}
 
 	final public Type type;

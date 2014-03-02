@@ -61,50 +61,49 @@ public final class R {
     }
     public static final class drawable {
         public static final int bgimg=0x7f020000;
-        public static final int bookbg=0x7f020001;
-        public static final int busy=0x7f020002;
-        public static final int button=0x7f020003;
-        public static final int cover=0x7f020004;
-        public static final int darkdenim3=0x7f020005;
-        public static final int ic_arrow_left=0x7f020006;
-        public static final int ic_arrow_right=0x7f020007;
-        public static final int ic_arrow_up=0x7f020008;
-        public static final int ic_cancel=0x7f020009;
-        public static final int ic_clipboard=0x7f02000a;
-        public static final int ic_dir=0x7f02000b;
-        public static final int ic_doc=0x7f02000c;
-        public static final int ic_link=0x7f02000d;
-        public static final int ic_list=0x7f02000e;
-        public static final int ic_magnifying_glass=0x7f02000f;
-        public static final int ic_reflow=0x7f020010;
-        public static final int ic_select=0x7f020011;
-        public static final int ic_strike=0x7f020012;
-        public static final int ic_updir=0x7f020013;
-        public static final int icon=0x7f020014;
-        public static final int page_num=0x7f020015;
-        public static final int search=0x7f020016;
-        public static final int seek_progress=0x7f020017;
-        public static final int seek_thumb=0x7f020018;
-        public static final int splash=0x7f020019;
-        public static final int tiled_background=0x7f02001a;
+        public static final int bookback=0x7f020001;
+        public static final int bookbg=0x7f020002;
+        public static final int busy=0x7f020003;
+        public static final int button=0x7f020004;
+        public static final int cover=0x7f020005;
+        public static final int head=0x7f020006;
+        public static final int ic_arrow_left=0x7f020007;
+        public static final int ic_arrow_right=0x7f020008;
+        public static final int ic_arrow_up=0x7f020009;
+        public static final int ic_cancel=0x7f02000a;
+        public static final int ic_clipboard=0x7f02000b;
+        public static final int ic_dir=0x7f02000c;
+        public static final int ic_docc=0x7f02000d;
+        public static final int ic_link=0x7f02000e;
+        public static final int ic_list=0x7f02000f;
+        public static final int ic_magnifying_glass=0x7f020010;
+        public static final int ic_reflow=0x7f020011;
+        public static final int ic_select=0x7f020012;
+        public static final int ic_strike=0x7f020013;
+        public static final int ic_updir=0x7f020014;
+        public static final int icon=0x7f020015;
+        public static final int page_num=0x7f020016;
+        public static final int search=0x7f020017;
+        public static final int seek_progress=0x7f020018;
+        public static final int seek_thumb=0x7f020019;
+        public static final int splash=0x7f02001a;
+        public static final int tiled_background=0x7f02001b;
     }
     public static final class id {
-        public static final int button1=0x7f0a0018;
-        public static final int button2=0x7f0a0017;
-        public static final int button3=0x7f0a0019;
+        public static final int ad=0x7f0a001b;
         public static final int button_close=0x7f0a0001;
         public static final int cancel=0x7f0a000b;
         public static final int cancelSelectButton=0x7f0a0010;
         public static final int copySelectButton=0x7f0a0012;
         public static final int docNameText=0x7f0a0004;
-        public static final int icon=0x7f0a001c;
-        public static final int imageView1=0x7f0a001e;
+        public static final int icon=0x7f0a0019;
+        public static final int imageView1=0x7f0a001c;
         public static final int info=0x7f0a0016;
         public static final int linkButton=0x7f0a0005;
         public static final int lowerButtons=0x7f0a0013;
-        public static final int name=0x7f0a001d;
+        public static final int name=0x7f0a001a;
         public static final int outlineButton=0x7f0a0007;
-        public static final int page=0x7f0a001b;
+        public static final int page=0x7f0a0018;
         public static final int pageNumber=0x7f0a0015;
         public static final int pageSlider=0x7f0a0014;
         public static final int reflowButton=0x7f0a0008;
@@ -115,7 +114,7 @@ public final class R {
         public static final int selectButton=0x7f0a0006;
         public static final int strikeOutButton=0x7f0a0011;
         public static final int switcher=0x7f0a0002;
-        public static final int title=0x7f0a001a;
+        public static final int title=0x7f0a0017;
         public static final int topBar=0x7f0a0003;
         public static final int topBar2=0x7f0a000a;
         public static final int topBar3=0x7f0a000f;
@@ -124,20 +123,20 @@ public final class R {
     public static final class layout {
         public static final int about=0x7f030000;
         public static final int buttons=0x7f030001;
-        public static final int caseshelf=0x7f030002;
-        public static final int main=0x7f030003;
-        public static final int outline_entry=0x7f030004;
-        public static final int picker_entry=0x7f030005;
-        public static final int splash=0x7f030006;
-        public static final int textentry=0x7f030007;
+        public static final int main=0x7f030002;
+        public static final int outline_entry=0x7f030003;
+        public static final int picker_entry=0x7f030004;
+        public static final int splash=0x7f030005;
+        public static final int textentry=0x7f030006;
     }
     public static final class raw {
         public static final int about=0x7f060000;
         public static final int textentry=0x7f060001;
     }
     public static final class string {
-        public static final int Welcome=0x7f080062;
+        public static final int Welcome=0x7f080063;
         public static final int about=0x7f080014;
+        public static final int admob=0x7f080062;
         public static final int app_name=0x7f080000;
         public static final int box=0x7f080040;
         public static final int cancel=0x7f080024;

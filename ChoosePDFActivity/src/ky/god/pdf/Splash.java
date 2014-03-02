@@ -80,15 +80,11 @@ public class Splash extends Activity {
 		        if (myFile.exists())  
 		        {  
 		      	 myFile.delete();
-		      	 myFile = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/yemen2014 Ebook");
-		      	 if (myFile.exists())  
+		      	 myFile = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Yemen2014 Ebook");
+		      	 if (!myFile.exists())  
 			        {
-		      		 
-			        }
-		      	 
-		        else{
-		        
-		       // new DownloadFileFromURL().execute(file_yemen);
+		      	        	
+		       
 		        String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/yemen2014.pdf";
 			    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 			    request.setDescription("Ebook Yemen2014");   //appears the same in Notification bar while downloading
@@ -105,11 +101,10 @@ public class Splash extends Activity {
 		        }
 		      	 
 		        } else{
-		        	 if (myFile.exists())  
+		        	myFile = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/yemen2014 Ebook");
+		        	 if (!myFile.exists())  
 				        {
-			      		 
-				        }else{
-			        
+			      		
 				       // new DownloadFileFromURL().execute(file_yemen);
 				        String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/yemen2014.pdf";
 					    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
@@ -129,13 +124,10 @@ public class Splash extends Activity {
 		        File myFileuae = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Uae Ebook");  
 		        if (myFileuae.exists())  
 		        {  myFileuae.delete();
-		        myFileuae = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/mainbook2014 Ebook");
-		      	 if (myFileuae.exists())  
+		        myFileuae = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/UAE2014 Ebook");
+		      	 if (!myFileuae.exists())  
 			        {
-		      		 
-			      		              
-		        }  else{
-		        
+		      			        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/mainbook2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook UAE2014");   //appears the same in Notification bar while downloading
@@ -151,13 +143,10 @@ public class Splash extends Activity {
 				    manager.enqueue(request);
 		        }
 		        } else{
-		        	 if (myFileuae.exists())  
+		        	 myFileuae = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/UAE2014 Ebook");
+		        	 if (!myFileuae.exists())  
 				        {
-			      		 
-				      		              
-			        } else{
-			        	
-			      
+			      	
 		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/mainbook2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
@@ -178,15 +167,10 @@ public class Splash extends Activity {
 		        if (myFilebahrain.exists())  
 		        {  
 		        	myFilebahrain.delete();
-		        	myFilebahrain = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/bahrain2014 Ebook");
-			      	 if (myFilebahrain.exists())  
+		        	myFilebahrain = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Bahrain2014 Ebook");
+			      	 if (!myFilebahrain.exists())  
 				        {
-			      		 
-				        }
-		        	
-		              
-		         else{
-		        
+			      	
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/bahrain2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Bahrain2014");   //appears the same in Notification bar while downloading
@@ -202,11 +186,10 @@ public class Splash extends Activity {
 				    manager.enqueue(request);
 		        }
 		        }  else{
-		        	 if (myFilebahrain.exists())  
+		        	myFilebahrain = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Bahrain2014 Ebook");
+		        	 if (!myFilebahrain.exists())  
 				        {
-			      		 
-				        }else{
-				        	
+			      		
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/bahrain2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Bahrain2014");   //appears the same in Notification bar while downloading
@@ -225,12 +208,10 @@ public class Splash extends Activity {
 		        if (myFilehouston.exists())  
 		        { 
 		        	myFilehouston.delete();
-		        	myFilehouston = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/houston2014 Ebook");
-			      	 if (myFilehouston.exists())  
+		        	myFilehouston = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Houston2014 Ebook");
+			      	 if (!myFilehouston.exists())  
 				        {
-			      		 
-				        }  else{
-		        
+			      				        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/houston2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Houston2014");   //appears the same in Notification bar while downloading
@@ -246,11 +227,10 @@ public class Splash extends Activity {
 				    manager.enqueue(request);
 		        }
 		        } else{
-		        	 if (myFilehouston.exists())  
+		        	myFilehouston = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Houston2014 Ebook");
+		        	 if (!myFilehouston.exists())  
 				        {
-			      		 
-				        }else{
-		        
+			      		
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/houston2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Houston2014");   //appears the same in Notification bar while downloading
@@ -269,12 +249,10 @@ public class Splash extends Activity {
 		        if (myFileiran.exists())  
 		        { 
 		        	myFileiran.delete();
-		        	myFileiran = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/iran2014.pdf");
-			      	 if (myFileiran.exists())  
+		        	myFileiran = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Iran2014 Ebook");  
+			      	 if (!myFileiran.exists())  
 				        {
-			      		 
-				        }  else{
-		        
+			      				        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/iran2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Iran2014");   //appears the same in Notification bar while downloading
@@ -290,11 +268,10 @@ public class Splash extends Activity {
 				    manager.enqueue(request);
 		        }
 		        }  else{
-		        	 if (myFileiran.exists())  
+		        	myFileiran = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Iran2014 Ebook");
+		        	 if (!myFileiran.exists())  
 				        {
-			      		 
-				        } else{
-		        
+			      			        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/iran2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Iran2014");   //appears the same in Notification bar while downloading
@@ -313,13 +290,9 @@ public class Splash extends Activity {
 		        if (myFileiraq.exists())  
 		        {
 		        	myFileiraq.delete();
-		        	myFileiraq = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/iraq2014.pdf");
-			      	 if (myFileiraq.exists())  
+		        	myFileiraq = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Iraq2014 Ebook");
+			      	 if (!myFileiraq.exists())  
 				        {
-			      		 
-				        } 
-		              
-		        else{
 		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/iraq2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
@@ -337,11 +310,9 @@ public class Splash extends Activity {
 		        }
 		        }
 		        else{
-		        	 if (myFileiraq.exists())  
+		        	myFileiraq = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Iraq2014 Ebook");
+		        	 if (!myFileiraq.exists())  
 				        {
-			      		 
-				        } else{
-			        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/iraq2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Iraq2014");   //appears the same in Notification bar while downloading
@@ -359,12 +330,9 @@ public class Splash extends Activity {
 		        File myFilekuwait = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Kuwait Ebook");  
 		        if (myFilekuwait.exists())  
 		        {   myFilekuwait.delete();
-		        myFilekuwait = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/kuwait2014.pdf");
-		      	 if (myFilekuwait.exists())  
+		        myFilekuwait = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Kuwait2014 Ebook");
+		      	 if (!myFilekuwait.exists())  
 			        {
-		      		 
-			        }  else{
-		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/kuwait2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Kuwait2014");   //appears the same in Notification bar while downloading
@@ -379,10 +347,9 @@ public class Splash extends Activity {
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        }   }else{
-		        	 if (myFilekuwait.exists())  
+		        	 myFilekuwait = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Kuwait2014 Ebook");
+		        	 if (!myFilekuwait.exists())  
 				        {
-			      		 
-				        }else{
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/kuwait2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Kuwait2014");   //appears the same in Notification bar while downloading
@@ -402,11 +369,9 @@ public class Splash extends Activity {
 		        if (myFileoman.exists())  
 		        {  
 		        	myFileoman.delete();
-		        	myFileoman = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/oman2014.pdf");
-				      	 if (myFileoman.exists())  
+		        	myFileoman = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Oman2014 Ebook");
+				      	 if (!myFileoman.exists())  
 					        {
-				      		 
-					        }    else{
 		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/oman2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
@@ -422,10 +387,9 @@ public class Splash extends Activity {
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        }  }    else{
-		        	 if (myFileoman.exists())  
+		        	myFileoman = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Oman2014 Ebook");
+		        	 if (!myFileoman.exists())  
 				        {
-			      		 
-				        }else{
 		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/oman2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
@@ -444,12 +408,9 @@ public class Splash extends Activity {
 		        File myFileqatar = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Qatar Ebook");  
 		        if (myFileqatar.exists())  
 		        {   myFileqatar.delete();
-		        myFileqatar = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/qatar2014.pdf");
-		      	 if (myFileqatar.exists())  
+		        myFileqatar = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Qatar2014 Ebook");
+		      	 if (!myFileqatar.exists())  
 			        {
-		      		 
-			        } else{
-		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/qatar2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Qatar2014");   //appears the same in Notification bar while downloading
@@ -464,11 +425,10 @@ public class Splash extends Activity {
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        } } else{
-		        	if (myFileqatar.exists())  
+		        	myFileqatar = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Qatar2014 Ebook");
+		        	if (!myFileqatar.exists())  
 			        {
-		      		 
-			        } else{
-		        
+		      		 		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/qatar2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Qatar2014");   //appears the same in Notification bar while downloading
@@ -486,11 +446,9 @@ public class Splash extends Activity {
 		        File myFilesaudi = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Saudi Ebook");  
 		        if (myFilesaudi.exists())  
 		        { myFilesaudi.delete();
-		        myFilesaudi = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/saudi2014.pdf");
-		      	 if (myFilesaudi.exists())  
+		        myFilesaudi = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Saudi2014 Ebook");
+		      	 if (!myFilesaudi.exists())  
 			        {
-		      		 
-			        }  else{
 		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/saudi2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
@@ -506,11 +464,9 @@ public class Splash extends Activity {
 				    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
 				    manager.enqueue(request);
 		        } }else{
-		        	 if (myFilesaudi.exists())  
+		        	 myFilesaudi = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/Saudi2014 Ebook");
+		        	 if (!myFilesaudi.exists())  
 				        {
-			      		 
-				        } else{
-		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/saudi2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook Saudi2014");   //appears the same in Notification bar while downloading
@@ -528,12 +484,9 @@ public class Splash extends Activity {
 		        File myFileinternational = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/International Ebook");  
 		        if (myFileinternational.exists())  
 		        {  myFileinternational.delete();
-		        myFileinternational = new File (Environment.getExternalStorageDirectory().toString() + "http://gulfoilfielddirectory.com/ebook/pdf/international2014.pdf");
-		      	 if (myFileinternational.exists())  
-			        {
-		      		 
-			        }  else{
-		        
+		        myFileinternational = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/International2014 Ebook");
+		      	 if (!myFileinternational.exists())  
+			        {		        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/international2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
 				    request.setDescription("Ebook International2014");   //appears the same in Notification bar while downloading
@@ -549,10 +502,10 @@ public class Splash extends Activity {
 				    manager.enqueue(request);
 		        } 
 		        }
-		        else{ if (myFileinternational.exists())  
+		        else{ 
+		        	 myFileinternational = new File (Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf/International2014 Ebook");
+		        	if (!myFileinternational.exists())  
 		        {
-		      		 
-		        } else{
 			        
 		        	String DownloadUrl = "http://gulfoilfielddirectory.com/ebook/pdf/international2014.pdf";
 				    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadUrl));
@@ -583,10 +536,7 @@ public class Splash extends Activity {
                  };
         splashTread.start();
     }
-				
-				
-	
-				
+							
 			
  
 
