@@ -66,28 +66,30 @@ public final class R {
         public static final int busy=0x7f020003;
         public static final int button=0x7f020004;
         public static final int cover=0x7f020005;
-        public static final int head=0x7f020006;
-        public static final int ic_arrow_left=0x7f020007;
-        public static final int ic_arrow_right=0x7f020008;
-        public static final int ic_arrow_up=0x7f020009;
-        public static final int ic_cancel=0x7f02000a;
-        public static final int ic_clipboard=0x7f02000b;
-        public static final int ic_dir=0x7f02000c;
-        public static final int ic_docc=0x7f02000d;
-        public static final int ic_link=0x7f02000e;
-        public static final int ic_list=0x7f02000f;
-        public static final int ic_magnifying_glass=0x7f020010;
-        public static final int ic_reflow=0x7f020011;
-        public static final int ic_select=0x7f020012;
-        public static final int ic_strike=0x7f020013;
-        public static final int ic_updir=0x7f020014;
-        public static final int icon=0x7f020015;
-        public static final int page_num=0x7f020016;
-        public static final int search=0x7f020017;
-        public static final int seek_progress=0x7f020018;
-        public static final int seek_thumb=0x7f020019;
-        public static final int splash=0x7f02001a;
-        public static final int tiled_background=0x7f02001b;
+        public static final int fail=0x7f020006;
+        public static final int head=0x7f020007;
+        public static final int ic_arrow_left=0x7f020008;
+        public static final int ic_arrow_right=0x7f020009;
+        public static final int ic_arrow_up=0x7f02000a;
+        public static final int ic_cancel=0x7f02000b;
+        public static final int ic_clipboard=0x7f02000c;
+        public static final int ic_dir=0x7f02000d;
+        public static final int ic_docc=0x7f02000e;
+        public static final int ic_link=0x7f02000f;
+        public static final int ic_list=0x7f020010;
+        public static final int ic_magnifying_glass=0x7f020011;
+        public static final int ic_reflow=0x7f020012;
+        public static final int ic_select=0x7f020013;
+        public static final int ic_strike=0x7f020014;
+        public static final int ic_updir=0x7f020015;
+        public static final int icon=0x7f020016;
+        public static final int page_num=0x7f020017;
+        public static final int search=0x7f020018;
+        public static final int seek_progress=0x7f020019;
+        public static final int seek_thumb=0x7f02001a;
+        public static final int splash=0x7f02001b;
+        public static final int success=0x7f02001c;
+        public static final int tiled_background=0x7f02001d;
     }
     public static final class id {
         public static final int ad=0x7f0a001b;
@@ -123,11 +125,10 @@ public final class R {
     public static final class layout {
         public static final int about=0x7f030000;
         public static final int buttons=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int outline_entry=0x7f030003;
-        public static final int picker_entry=0x7f030004;
-        public static final int splash=0x7f030005;
-        public static final int textentry=0x7f030006;
+        public static final int outline_entry=0x7f030002;
+        public static final int picker_entry=0x7f030003;
+        public static final int splash=0x7f030004;
+        public static final int textentry=0x7f030005;
     }
     public static final class raw {
         public static final int about=0x7f060000;

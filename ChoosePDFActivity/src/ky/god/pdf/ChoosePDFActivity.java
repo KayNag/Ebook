@@ -6,15 +6,15 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
-import ky.god.pdf.R;
 
 import android.app.AlertDialog;
+import android.app.DownloadManager;
 import android.app.ListActivity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -62,7 +62,12 @@ public class ChoosePDFActivity extends ListActivity {
 		
 		
 			mDirectory = (Environment.getExternalStoragePublicDirectory("/Android/obb/ky.God.pdf/" ) );
-
+			DownloadManager downloadManager = null;
+			String status = downloadManager.COLUMN_STATUS;
+			if(status.equals(null)){
+				ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+				cd.internet();
+			}
 		// Create a list adapter...
 		adapter = new ChoosePDFAdapter(getLayoutInflater());
 		setListAdapter(adapter);

@@ -70,6 +70,7 @@ public class Splash extends Activity {
 				
 			File wallpaperDirectory = new File(Environment.getExternalStorageDirectory().toString() + "/Android/obb/ky.god.pdf");
 		        if(wallpaperDirectory.exists())
+		        	
 		        {
 		        	
 		        }else{
