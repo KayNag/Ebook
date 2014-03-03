@@ -1,22 +1,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-     xmlns:googleads="http://schemas.android.com/apk/lib/com.google.ads"
     xmlns:tools="http://schemas.android.com/tools"
-    
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/text_pressed"
     tools:context=".MainActivity" >
- <com.google.ads.AdView
-       
-        android:id="@+id/ad"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        googleads:adSize="BANNER"
-        googleads:adUnitId="@string/admob"
-         />
+ 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"

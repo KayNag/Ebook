@@ -24,6 +24,7 @@ public class AboutPDFViewActivity extends Activity {
 	public void onCreate(Bundle state) {
 		super.onCreate(state);
 		this.setContentView(R.layout.about);
+		
 		WebView v = (WebView)this.findViewById(R.id.webview_about);
 		android.content.res.Resources resources = this.getResources();
 		InputStream aboutHtmlInputStream = new BufferedInputStream(resources.openRawResource(R.raw.about));
@@ -37,7 +38,7 @@ public class AboutPDFViewActivity extends Activity {
 			throw new RuntimeException(e);
 		}
 
-		v.loadData(
+	v.loadData(
 				aboutHtml,
 				"text/html",
 				"utf-8"

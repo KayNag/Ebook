@@ -10,6 +10,7 @@ import java.util.Map;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -33,6 +34,7 @@ public class ChoosePDFActivity extends ListActivity {
 	private Handler	     mHandler;
 	private Runnable     mUpdateFiles;
 	private ChoosePDFAdapter adapter;
+	ConnectionDetector cd;
 	
 
 	@Override
@@ -57,17 +59,54 @@ public class ChoosePDFActivity extends ListActivity {
 			alert.show();
 			return;
 		}
-	
-	
+		 
+		DownloadManager.Query query = null;
+	    Cursor c = null;
+	    DownloadManager downloadManager = null;
+	    downloadManager = (DownloadManager)getSystemService(Context.DOWNLOAD_SERVICE);
+	    query = new DownloadManager.Query();
+	     if(query!=null) {
+	                query.setFilterByStatus(DownloadManager.STATUS_FAILED|DownloadManager.STATUS_PAUSED|DownloadManager.STATUS_SUCCESSFUL|
+	                        DownloadManager.STATUS_RUNNING|DownloadManager.STATUS_PENDING);
+	            } else {
+	                return;
+	            }
+	    c = downloadManager.query(query);
+	    
+	    
+	    if(c.moveToFirst()) { 
+	    int status = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS)); 
+	    switch(status) { 
+	    case DownloadManager.STATUS_PAUSED: 
+	    break; 
+	    case DownloadManager.STATUS_PENDING: 
+	    	
+			internet();
+			
+			showAlertDialog(this, "Please , Wait",
+                    "Downloading Ebook , you can see the progress in notification bar.\nClicking on OK will close the application and you can open the application once the download is completed.\nClicking on cancel will proceed to the application", true);
+			
+	    break; 
+	    case DownloadManager.STATUS_RUNNING: 
+	    	
+			internet();
+			showAlertDialog(this, "Please , Wait",
+                    "Downloading Ebook , you can see the progress in notification bar.\nClicking on OK will close the application and you can open the application once the download is completed.\nClicking on cancel will proceed to the application", true);
+	    break; 
+	    case DownloadManager.STATUS_SUCCESSFUL: 
+	    break; 
+	    case DownloadManager.STATUS_FAILED: 
+	    	
+			internet();
+			showAlertDialog(this, "No Internet Connection",
+                    "You don't have internet connection.", false);
+	    break; 
+	    }
+	}
 		
 		
 			mDirectory = (Environment.getExternalStoragePublicDirectory("/Android/obb/ky.God.pdf/" ) );
-			DownloadManager downloadManager = null;
-			String status = downloadManager.COLUMN_STATUS;
-			if(status.equals(null)){
-				ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
-				cd.internet();
-			}
+			
 		// Create a list adapter...
 		adapter = new ChoosePDFAdapter(getLayoutInflater());
 		setListAdapter(adapter);
@@ -88,7 +127,7 @@ public class ChoosePDFActivity extends ListActivity {
 				String title = res.getString(R.string.picker_title);
 				setTitle(String.format("PLEASE SELECT A COUNTRY FROM THE LIST"));
 
-				mParent = mDirectory.getParentFile();
+				//mParent = mDirectory.getParentFile();
 
 				mDirs = mDirectory.listFiles(new FileFilter() {
 
@@ -140,8 +179,9 @@ public class ChoosePDFActivity extends ListActivity {
 				});
 
 				adapter.clear();
+				adapter.notifyDataSetChanged();
 		if (mParent != null)
-			adapter.add(new ChoosePDFItem(ChoosePDFItem.Type.PARENT, "OPEN OTHER EBOOK"));
+		//	adapter.add(new ChoosePDFItem(ChoosePDFItem.Type.PARENT, "OPEN OTHER EBOOK"));
 				for (File f : mDirs)
 					adapter.add(new ChoosePDFItem(ChoosePDFItem.Type.DIR, f.getName()));
 				for (File f : mFiles)
@@ -176,7 +216,7 @@ public class ChoosePDFActivity extends ListActivity {
 		mPositions.put(mDirectory.getAbsolutePath(), getListView().getFirstVisiblePosition());
 
 		if (position < (mParent == null ? 0 : 1)) {
-			mDirectory = mParent;
+			//mDirectory = mParent;
 			mHandler.post(mUpdateFiles);
 			return;
 		}
@@ -211,5 +251,50 @@ public class ChoosePDFActivity extends ListActivity {
 		   intent.addCategory(Intent.CATEGORY_HOME);
 		   intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		   startActivity(intent);
+		 }
+	  public void showAlertDialog(Context context, String title, String message, Boolean status) {
+			final AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+			 
+	        // Setting Dialog Title
+	        alertDialog.setTitle(title);
+	 
+	        // Setting Dialog Message
+	        alertDialog.setMessage(message);
+	         
+	        // Setting alert dialog icon
+	        alertDialog.setIcon((status) ? R.drawable.success : R.drawable.fail);
+	 
+	        // Setting OK Button
+	        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	            	alertDialog.dismiss();
+	            	finish();
+	            	
+	            }
+	        });
+	        
+	        alertDialog.setButton2("Cancel", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	            	alertDialog.dismiss();
+	            	
+	            	
+	            }
+	        });
+	        // Showing Alert Message
+	        alertDialog.show();
+			
+			// TODO Auto-generated method stub
+			
+		};
+		 public void internet() {
+			 cd = new ConnectionDetector(getApplicationContext());
+			 Boolean isInternetPresent = false;
+			 isInternetPresent = cd.isConnectingToInternet();
+		
+			 if (!isInternetPresent) {
+				    showAlertDialog(ChoosePDFActivity.this, "No Internet Connection",
+                           "You don't have internet connection.", false);
+				   
+               }
 		 }
 }

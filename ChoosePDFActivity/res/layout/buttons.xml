@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout" >
+    
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
@@ -215,3 +221,95 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#FFFFFF" />
 </RelativeLayout>
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#9969ACE7"
+        android:id="@+id/top_layout" 
+        android:padding="20dp"
+        >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+      
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:background="@color/button_normal"
+        android:drawableLeft="@drawable/ic_link"
+        android:text="Access Link in Ebook"
+        android:textColor="@color/seek_progress" />
+       
+    <Button
+        android:id="@+id/button2"
+          android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+  
+        android:layout_below="@+id/button1"
+        
+        android:background="@color/button_normal"
+        android:drawableLeft="@drawable/ic_select"
+        android:text="Edit Ebook"
+        android:textColor="@color/seek_progress" />
+
+    <Button
+        android:id="@+id/button3"
+          android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+   
+        android:layout_below="@+id/button2"
+        
+        android:background="@color/button_normal"
+        android:drawableLeft="@drawable/ic_list"
+        android:text="Ebook as Listview"
+        android:textColor="@color/seek_progress" />
+
+    <Button
+        android:id="@+id/button4"
+          android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/button3"
+        android:background="@color/button_normal"
+        android:drawableLeft="@drawable/ic_reflow"
+        android:text="View Ebook as Text"
+        android:textColor="@color/seek_progress" />
+
+    <Button
+        android:id="@+id/button5"
+          android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/button4"
+        
+        android:background="@color/button_normal"
+        android:drawableLeft="@drawable/ic_magnifying_glass"
+        android:text="Search Ebook"
+        android:textColor="@color/seek_progress" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp"
+        android:text="Access this tutorial menu anytime by clicking on menu"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
+</FrameLayout>

@@ -34,6 +34,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
@@ -61,6 +62,7 @@ public class MuPDFActivity extends Activity
 	private MuPDFCore    core;
 	private String       mFileName;
 	private MuPDFReaderView mDocView;
+	View topLevelLayout;
 	private View         mButtonsView;
 	private boolean      mButtonsVisible;
 	private EditText     mPasswordView;
@@ -92,6 +94,7 @@ public class MuPDFActivity extends Activity
 	private AsyncTask<Void,Void,MuPDFAlert> mAlertTask;
 	private AlertDialog mAlertDialog;
 	private MenuItem aboutMenuItem = null;
+	private MenuItem tutorial = null;
 	private MenuItem gotoPageMenuItem = null;
 	private MenuItem rotateLeftMenuItem = null;
 	private MenuItem rotateRightMenuItem = null;
@@ -354,6 +357,11 @@ public class MuPDFActivity extends Activity
 		}
 
 		createUI(savedInstanceState);
+		 topLevelLayout = findViewById(R.id.top_layout);
+		 
+	       if (isFirstTime()) {
+	        	topLevelLayout.setVisibility(View.INVISIBLE);
+	        }
 	}
 
 	public void requestPassword(final Bundle savedInstanceState) {
@@ -915,6 +923,7 @@ public class MuPDFActivity extends Activity
 	    	 */
 			//this.findTextMenuItem = menu.add(R.string.find_text);
 	    	this.aboutMenuItem = menu.add(R.string.about);
+	    	this.tutorial = menu.add(R.string.tutorial);
 	    	return true;
 	    }
 	 public boolean onOptionsItemSelected(MenuItem menuItem) {
@@ -923,9 +932,13 @@ public class MuPDFActivity extends Activity
 				intent.setClass(this, AboutPDFViewActivity.class);
 				this.startActivity(intent);
 	    		return true;
-	    	} else if (menuItem == this.gotoPageMenuItem) {
-	    		showGotoPageDialog();
-	    		
+	    	} else if (menuItem == this.tutorial) {
+	    		 if (isFirstTime()) {
+	 	        	topLevelLayout.setVisibility(View.VISIBLE);
+	 	        }else{
+	 	        	topLevelLayout.setVisibility(View.VISIBLE);
+	 	        }
+	    		return true;
 	    			
 	    			
 	    		
@@ -1052,8 +1065,8 @@ public class MuPDFActivity extends Activity
 				}
 			};
 			AlertDialog alert = mAlertBuilder.create();
-			alert.setTitle("MuPDF");
-			alert.setMessage("Document has changes. Save them?");
+			alert.setTitle("GOD");
+			alert.setMessage("Ebook has changes. Save them?");
 			alert.setButton(AlertDialog.BUTTON_POSITIVE, "Yes", listener);
 			alert.setButton(AlertDialog.BUTTON_NEGATIVE, "No", listener);
 			alert.show();
@@ -1061,4 +1074,32 @@ public class MuPDFActivity extends Activity
 			super.onBackPressed();
 		}
 	}
+	  private boolean isFirstTime()
+  	{
+      SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+      boolean ranBefore = preferences.getBoolean("RanBefore", false);
+      if (!ranBefore) {
+
+          SharedPreferences.Editor editor = preferences.edit();
+          editor.putBoolean("RanBefore", true);
+          editor.commit();
+          topLevelLayout.setVisibility(View.VISIBLE);
+          topLevelLayout.setOnTouchListener(new View.OnTouchListener(){
+
+		
+
+		@Override
+		public boolean onTouch(View paramView, MotionEvent paramMotionEvent) {
+			topLevelLayout.setVisibility(View.INVISIBLE);
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		            });
+
+		    }
+		return ranBefore;
+
+		}
+	
 }

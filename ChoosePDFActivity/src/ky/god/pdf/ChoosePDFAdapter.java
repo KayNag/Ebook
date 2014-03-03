@@ -22,6 +22,7 @@ public class ChoosePDFAdapter extends BaseAdapter {
 	public ChoosePDFAdapter(LayoutInflater inflater) {
 		mInflater = inflater;
 		mItems = new LinkedList<ChoosePDFItem>();
+		
 	}
 
 	public void clear() {
@@ -58,6 +59,7 @@ public class ChoosePDFAdapter extends BaseAdapter {
 		View v;
 		if (convertView == null) {
 			v = mInflater.inflate(R.layout.picker_entry, null);
+		
 		} else {
 			v = convertView;
 		}
