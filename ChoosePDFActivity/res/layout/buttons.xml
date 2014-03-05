@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
 	android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_layout" >
@@ -177,12 +178,13 @@
     </ViewAnimator>
 
     <RelativeLayout
+        
         android:id="@+id/lowerButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" >
-
+        
         <SeekBar
             android:id="@+id/pageSlider"
             android:layout_width="match_parent"
@@ -196,6 +198,14 @@
             android:paddingTop="12dp"
             android:progressDrawable="@drawable/seek_progress"
             android:thumb="@drawable/seek_thumb" />
+        <com.google.ads.AdView android:id="@+id/ad"
+                                    android:layout_width="wrap_content"
+                                    android:layout_alignTop="@+id/pageSlider"
+                           android:layout_height="wrap_content"
+                           ads:adSize="BANNER"
+                           ads:adUnitId="a153131664e1091"
+                           ads:testDevices="6206DBC7AC019F106680DB33c70F8601"
+                           ads:loadAdOnCreate="true"/>
 
         <TextView
             android:id="@+id/pageNumber"
@@ -220,6 +230,8 @@
         android:background="@drawable/page_num"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#FFFFFF" />
+    
+     
 </RelativeLayout>
 
 <RelativeLayout 

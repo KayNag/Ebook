@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ky.god.pdf"
-    android:versionCode="3"
+    android:versionCode="4"
     android:versionName="@string/version"
     android:installLocation="auto">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -82,8 +82,7 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-       <activity android:name="com.adsdk.sdk.banner.InAppWebView" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-<activity android:name="com.adsdk.sdk.video.RichMediaActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"	android:hardwareAccelerated="false" />
-<activity android:name="com.adsdk.sdk.mraid.MraidBrowser" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+       <activity android:name="com.google.ads.AdActivity"
+                  android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
     </application>
 </manifest> 
