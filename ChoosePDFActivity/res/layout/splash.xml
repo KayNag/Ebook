@@ -1,9 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/text_pressed"
+    android:background="@color/canvas"
     tools:context=".MainActivity" >
  
     <ImageView
@@ -13,14 +13,18 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:padding="10dp"
         android:src="@drawable/splash" />
-        <com.google.ads.AdView android:id="@+id/ad"
+
+        <com.google.ads.AdView
+            android:id="@+id/ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           ads:adSize="BANNER"
-                           ads:adUnitId="a153131664e1091"
-                           
-                           ads:loadAdOnCreate="true"/>
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="a153131664e1091"
+            ads:loadAdOnCreate="true" >
+        </com.google.ads.AdView>
     
 </RelativeLayout>

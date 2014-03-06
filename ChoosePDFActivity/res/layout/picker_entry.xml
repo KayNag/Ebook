@@ -27,13 +27,18 @@
         android:paddingTop="8dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-         <com.google.ads.AdView android:id="@+id/ad"
+         <com.google.ads.AdView
+             android:id="@+id/ad"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
              android:layout_alignParentBottom="true"
-                                    android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           ads:adSize="BANNER"
-                           ads:adUnitId="a153131664e1091"
-                           ads:testDevices="6206DBC7AC019F106680DB33c70F8601"
-                           ads:loadAdOnCreate="true"/>
+             android:layout_alignBottom="@+id/name"
+             
+             android:layout_toRightOf="@+id/icon"
+             ads:adSize="BANNER"
+             ads:adUnitId="a153131664e1091"
+             ads:loadAdOnCreate="true"
+             ads:testDevices="6206DBC7AC019F106680DB33c70F8601" >
+         </com.google.ads.AdView>
     
 </RelativeLayout>
